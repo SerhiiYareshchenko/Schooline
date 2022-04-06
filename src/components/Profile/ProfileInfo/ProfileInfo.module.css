@@ -1,0 +1,11 @@
+.profileInfo {
+  display: inline;
+}
+
+.description{
+  padding: 10px;
+}
+
+.profileInfo img {
+  width: 100%;
+}

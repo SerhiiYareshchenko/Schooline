@@ -1,0 +1,15 @@
+.item{
+  font-size: medium;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: darkgreen;
+}
+.item img{
+  width: 15px;
+}
+.likes{
+  display: flex;
+  justify-content: left;
+  color: rgb(207, 42, 42);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+}

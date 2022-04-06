@@ -1,0 +1,16 @@
+.user {
+    padding-down: auto;
+    dispay: auto;
+}
+
+.user img {
+    width: 10%
+}
+
+.profile {
+    position: center;
+}
+
+.description {
+    display: block;
+}
