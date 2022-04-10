@@ -1,6 +1,6 @@
 import React from 'react';
 import us from './User.module.css';
-import avatar from './2.jpg';
+/*import avatar from '';*/
 
 const User = (props) => {
 
@@ -13,7 +13,7 @@ const User = (props) => {
   return (
     <nav className={us.user}>
       <div className={us.avatar}>
-        <img src={props.photo != null ? props.photo : avatar} alt="2" />
+        <img src={props.photo{/* != null ? props.photo : avatar*/}} alt="2" />
       </div>
 {/*       <div>
         <button onClick={this.handleClick}>

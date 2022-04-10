@@ -5,7 +5,7 @@ const ProfileInfo = () => {
   return (
     <div className={pi.profileInfo}>
       <div>
-        <img src='123.jpg' alt="4"/>
+        зображення
       </div>
 
       <div className={pi.description}>

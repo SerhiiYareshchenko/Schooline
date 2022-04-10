@@ -8,48 +8,7 @@ let initialState = {
             age: 28,
             meritalStatus: 'Married',
             country: 'United States',
-            photo: 'photo1.jpg'
-        },
-        {
-            id: 2,
-            name: 'Pavel',
-            age: 29,
-            meritalStatus: 'Married',
-            country: 'Finland',
-            photo: 'photo2.jpg'
-        },
-        {
-            id: 3,
-            name: 'Vadym',
-            age: 22,
-            meritalStatus: 'Single',
-            country: 'Ukraine',
-            photo: 'photo3.jpg'
-        },
-        {
-            id: 4,
-            name: 'Anton',
-            age: 35,
-            meritalStatus: 'Divorced',
-            country: 'Poland',
-            photo: 'photo4.jpg'
-        },
-        {
-            id: 5,
-            name: 'Mykyta',
-            age: 30,
-            meritalStatus: 'Single',
-            country: 'Skotland',
-            photo: 'photo5.jpg'
-        },
-        {
-            id: 6,
-            name: 'Aleksander',
-            age: 26,
-            meritalStatus: 'Unmarried',
-            country: 'France',
-            photo: 'photo6.png'
-        }
+            photo: ''
     ]
 };
 
