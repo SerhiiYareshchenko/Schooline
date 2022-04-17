@@ -4,13 +4,15 @@ import friendsReducer from "./friends-reducer";
 import profileReducer from "./profile-reducer";
 import sidebarReducer from "./sidebar-reducer";
 import usersReducer from "./users-reducer";
+import githubReducer from "./github-repos-reducer";
 
 let reducers = combineReducers({
     profilePage: profileReducer,
     dialogsPage: dialogsReducer,
     sidebar: sidebarReducer,
     friendsPage: friendsReducer,
-    usersPage: usersReducer
+    usersPage: usersReducer,
+    githubPage: githubReducer
 });
 
 let store = createStore(reducers);

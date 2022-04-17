@@ -1,11 +1,20 @@
 import Users from "./Users";
-import {setUsersCreator, findUsersCreator, followToFriendCreator, unfollowToFriendCreator, showMoreUsersCreator, sendMessageToUserCreator, openUserPageCreator} from "../../redux/users-reducer";
-import { connect } from "react-redux";
+import {
+    setUsersCreator,
+    findUsersCreator,
+    followToFriendCreator,
+    unfollowToFriendCreator,
+    showMoreUsersCreator,
+    sendMessageToUserCreator,
+    openUserPageCreator,
+    setCurrentPageCreator
+} from "../../redux/users-reducer";
+import {connect} from "react-redux";
 
 
 let mapStateToProps = (state) => {
     return {
-        users: state.usersPage.users
+        usersPageData: state.usersPage
     }
 };
 
@@ -16,7 +25,7 @@ let mapDispatchToProps = (dispatch) => {
         },
         unfollowToFriend: (userId) => {
             dispatch(unfollowToFriendCreator(userId));
-        }, 
+        },
         setUsers: (users) => {
             dispatch(setUsersCreator(users));
         },
@@ -31,10 +40,11 @@ let mapDispatchToProps = (dispatch) => {
         },
         openUserPage: () => {
             dispatch(openUserPageCreator());
+        },
+        setCurrentPage: (pageNumber) => {
+            dispatch(setCurrentPageCreator(pageNumber));
         }
     }
 };
 
-const UsersContainer = connect(mapStateToProps, mapDispatchToProps)(Users);
-
-export default UsersContainer;
+export default connect(mapStateToProps, mapDispatchToProps)(Users);

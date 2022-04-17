@@ -1,0 +1,9 @@
+.body{
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 1080px;
+    background: #00c9e4;
+}
