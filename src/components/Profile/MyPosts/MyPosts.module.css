@@ -1,3 +1,11 @@
 .myPosts{
     padding: 10px;
 }
+.myPosts .item .button{
+    background: linear-gradient(45deg, #FE688B, #5c5de8);
+    border: 0;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    color: white;
+    padding: 15px 30px;
+}
