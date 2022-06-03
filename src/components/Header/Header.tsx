@@ -5,27 +5,25 @@ import Logo from './logo.png'
 
 
 const Header = () => {
-  return <AppBar position="static">
-      <Toolbar>
-          <Typography
-              variant="h6"
-              component="span"
-              sx={{flexGrow: 1}}
-              color="white"
-          >
-              <Box
-                  size="50%"
-                  component='img'
-                  src={Logo}
-              />
-
-          </Typography>
-          <IconButton>
-              <UserForm/>
-          </IconButton>
-      </Toolbar>
-  </AppBar>
-
-  }
+    return <AppBar position="static">
+        <Toolbar>
+            <Typography
+                variant="h6"
+                component="span"
+                sx={{flexGrow: 1}}
+                color="white"
+            >
+                <Box
+                    sx={{width: '75%'}}
+                    component='img'
+                    src={Logo}
+                />
+            </Typography>
+            <IconButton>
+                <UserForm/>
+            </IconButton>
+        </Toolbar>
+    </AppBar>
+}
 export default Header;
 
