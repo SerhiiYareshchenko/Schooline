@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 import {Dispatch} from "redux";
 import {IUser} from "../../models/IUser/IUser";
 import AuthService from "../../services/AuthService";
@@ -13,7 +13,8 @@ export const login = (email: string, password: string) => {
             localStorage.setItem('token', response.data.accessToken);
             dispatch({type: UserFormActionTypes.SET_AUTH, isAuth: true})
             dispatch({type: UserFormActionTypes.SET_USER, user: response.data.user})
-        } catch (e) {
+        } catch (error) {
+            const e = error as AxiosError
             console.log(e.response?.data?.message);
         }
     }
@@ -27,7 +28,8 @@ export const registration = (email: string, password: string) => {
             localStorage.setItem('token', response.data.accessToken);
             dispatch({type: UserFormActionTypes.SET_AUTH, isAuth: true})
             dispatch({type: UserFormActionTypes.SET_USER, user: response.data.user})
-        } catch (e) {
+        } catch (error) {
+            const e = error as AxiosError
             console.log(e.response?.data?.message);
         }
     }
@@ -40,7 +42,8 @@ export const logout = () => {
             localStorage.removeItem('token');
             dispatch({type: UserFormActionTypes.SET_AUTH, isAuth: false})
             dispatch({type: UserFormActionTypes.SET_USER, user: {} as IUser})
-        } catch (e) {
+        } catch (error) {
+            const e = error as AxiosError
             console.log(e.response?.data?.message);
         }
     }
@@ -55,7 +58,8 @@ export const checkAuth = () => {
             localStorage.setItem('token', response.data.accessToken);
             dispatch({type: UserFormActionTypes.SET_AUTH, isAuth: true})
             dispatch({type: UserFormActionTypes.SET_USER, user: response.data.user})
-        } catch (e) {
+        } catch (error) {
+            const e = error as AxiosError
             console.log(e.response?.data?.message);
         } finally {
             dispatch({type: UserFormActionTypes.SET_LOADING, isLoading: false})

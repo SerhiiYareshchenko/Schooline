@@ -1,5 +1,4 @@
 import React from 'react';
-import s from './Dialogs.module.css';
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import {useActions} from "../../hooks/useActions";
 import {NavLink} from 'react-router-dom';
@@ -19,14 +18,14 @@ const Dialogs: React.FC = () => {
     }
 
     return (
-        <div className={s.dialogs}>
+        <div>
 
             {dialogsData.map(d =>
-                <div className={s.dialog + ' ' + s.active}>
+                <div>
                     <NavLink to={"/dialogs/" + d.id}>{d.name}</NavLink>
                 </div>)}
 
-            {messagesData.map(m => <div className={s.dialog}>{m.message}</div>)}
+            {messagesData.map(m => <div>{m.message}</div>)}
 
             <div>
                     <textarea value={newMessageBody}
